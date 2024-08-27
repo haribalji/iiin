@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head Cache-Control: no-store
+>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('./image/ani1.jpg'); /* Replace with your background image path */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque background */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 3px;
+            color: #555;
+            font-size: 16px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .form-group button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+            padding: 10px;
+            margin-left: 60px;
+        }
+
+        .form-group button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 20px;
+                max-width: 100%;
+            }
+
+            .form-group input, .form-group select {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .form-group input[type="submit"] {
+                font-size: 16px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Student Registration</h2>
+        <form class="myForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" required min="1" max="150">
+            </div>
+            <div class="form-group">
+                <label for="email">Email ID</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="empid">empid</label>
+                <input type="number" id="rollnumber" name="rollnumber" placeholder="eg :01"   required>
+                <!-- <input type="number" id="rollnumber" name="rollnumber" required min="1" step="1"> -->
+            </div>
+            <div class="form-group">
+                <label for="department">Department</label>
+                <input type="text" id="department" name="department" placeholder="eg:cse" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit"  value="Submit" >submit</button> 
+                <!-- value="Submit"> -->
+            </div>
+        </form>
+    </div>
+
+    <script type="module" src="./gettingdetails.js"></script>
+</body>
+</html>

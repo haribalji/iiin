@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Buttons with Images</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .button img {
+            width: 50px; /* Adjust as needed */
+            height: 50px; /* Adjust as needed */
+            margin-bottom: 10px; /* Adjust spacing between image and text */
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <div class="button" onclick="handleButtonClick1('admin')">
+            <img src="./image/img.jpg" alt="Admin Image">
+            Admin
+        </div>
+        <div class="button" onclick="handleButtonClick2('student')">
+            <img src="./image/im2.jpg" alt="Student Image">
+            Student
+        </div>
+    </div>
+
+    <script>
+        function handleButtonClick1(role) {
+            console.log(`Button clicked: ${role}`);
+            // You can add your custom logic here based on the role
+            window.location.href="admin.html";
+        }
+        function handleButtonClick2(role) {
+            console.log(`Button clicked: ${role}`);
+            // You can add your custom logic here based on the role
+            window.location.href="student.html";
+        }
+    </script>
+</body>
+</html>
